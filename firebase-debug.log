@@ -1,0 +1,217 @@
+[debug] [2023-05-28T11:33:49.484Z] ----------------------------------------------------------------------
+[debug] [2023-05-28T11:33:49.486Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fusek\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-05-28T11:33:49.486Z] CLI Version:   11.20.0
+[debug] [2023-05-28T11:33:49.487Z] Platform:      win32
+[debug] [2023-05-28T11:33:49.487Z] Node Version:  v18.12.1
+[debug] [2023-05-28T11:33:49.488Z] Time:          Sun May 28 2023 23:33:49 GMT+1200 (GMT+12:00)
+[debug] [2023-05-28T11:33:49.488Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-28T11:33:49.494Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-05-28T11:33:49.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-28T11:33:49.641Z] > authorizing via signed-in user (teck.koda@gmail.com)
+[debug] [2023-05-28T11:33:49.641Z] [iam] checking project aamusted-timetable for permissions ["firebase.projects.get"]
+[debug] [2023-05-28T11:33:49.643Z] > refreshing access token with scopes: []
+[debug] [2023-05-28T11:33:49.644Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-28T11:33:49.644Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-28T11:33:50.360Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-28T11:33:50.361Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-05-28T11:33:50.531Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-28T11:33:50.531Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-28T11:33:50.541Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions [none]
+[debug] [2023-05-28T11:33:50.541Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions x-goog-quota-user=projects/aamusted-timetable
+[debug] [2023-05-28T11:33:50.541Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-28T11:33:51.737Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions 200
+[debug] [2023-05-28T11:33:51.737Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-28T11:33:51.743Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] !  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2023-05-28T11:33:51.779Z] defaultcredentials: writing to file C:\Users\fusek\AppData\Roaming\firebase\teck_koda_gmail.com_application_default_credentials.json
+[debug] [2023-05-28T11:33:51.781Z] DEBUG: Setting GAC to C:\Users\fusek\AppData\Roaming\firebase\teck_koda_gmail.com_application_default_credentials.json
+[debug] [2023-05-28T11:33:51.782Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig [none]
+[debug] [2023-05-28T11:33:52.987Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig 200
+[debug] [2023-05-28T11:33:52.987Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig {"projectId":"aamusted-timetable","storageBucket":"aamusted-timetable.appspot.com","locationId":"us-central"}
+[debug] [2023-05-28T11:33:53.007Z] [functions] Watching "C:\Users\fusek\Desktop\firebase-api\functions" for Cloud Functions...
+[debug] [2023-05-28T11:33:53.014Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-05-28T11:33:55.677Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-05-28T11:33:55.677Z] Building nodejs source
+[debug] [2023-05-28T11:33:55.680Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-28T11:33:56.164Z] Serving at port 9005
+
+[debug] [2023-05-28T11:33:56.402Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-28T11:33:56.412Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-05-28T11:33:56.437Z] [functions] Loaded functions definitions from source: app.
+[debug] [2023-05-28T11:33:56.438Z] [functions[us-central1-app]] http function initialized (http://127.0.0.1:5000/aamusted-timetable/us-central1/app).
+[info] i  functions: Loaded functions: app 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-05-28T11:34:48.812Z] ----------------------------------------------------------------------
+[debug] [2023-05-28T11:34:48.815Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fusek\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-05-28T11:34:48.816Z] CLI Version:   11.20.0
+[debug] [2023-05-28T11:34:48.816Z] Platform:      win32
+[debug] [2023-05-28T11:34:48.816Z] Node Version:  v18.12.1
+[debug] [2023-05-28T11:34:48.817Z] Time:          Sun May 28 2023 23:34:48 GMT+1200 (GMT+12:00)
+[debug] [2023-05-28T11:34:48.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-28T11:34:48.920Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-28T11:34:48.921Z] > authorizing via signed-in user (teck.koda@gmail.com)
+[debug] [2023-05-28T11:34:48.921Z] [iam] checking project aamusted-timetable for permissions ["firebase.projects.get"]
+[debug] [2023-05-28T11:34:48.924Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions [none]
+[debug] [2023-05-28T11:34:48.924Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions x-goog-quota-user=projects/aamusted-timetable
+[debug] [2023-05-28T11:34:48.925Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-28T11:34:51.141Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions 200
+[debug] [2023-05-28T11:34:51.141Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] !  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2023-05-28T11:34:51.151Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] !  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2023-05-28T11:34:51.184Z] defaultcredentials: writing to file C:\Users\fusek\AppData\Roaming\firebase\teck_koda_gmail.com_application_default_credentials.json
+[debug] [2023-05-28T11:34:51.186Z] DEBUG: Setting GAC to C:\Users\fusek\AppData\Roaming\firebase\teck_koda_gmail.com_application_default_credentials.json
+[debug] [2023-05-28T11:34:51.187Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig [none]
+[debug] [2023-05-28T11:34:52.028Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig 200
+[debug] [2023-05-28T11:34:52.028Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig {"projectId":"aamusted-timetable","storageBucket":"aamusted-timetable.appspot.com","locationId":"us-central"}
+[debug] [2023-05-28T11:34:52.045Z] [functions] Watching "C:\Users\fusek\Desktop\firebase-api\functions" for Cloud Functions...
+[debug] [2023-05-28T11:34:52.052Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-05-28T11:34:54.662Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-05-28T11:34:54.662Z] Building nodejs source
+[debug] [2023-05-28T11:34:54.665Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-28T11:34:55.080Z] Serving at port 9005
+
+[debug] [2023-05-28T11:34:55.295Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-28T11:34:55.306Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-05-28T11:34:55.328Z] [functions] Loaded functions definitions from source: app.
+[debug] [2023-05-28T11:34:55.330Z] [functions[us-central1-app]] http function initialized (http://127.0.0.1:5001/aamusted-timetable/us-central1/app).
+[info] i  functions: Loaded functions: app 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-05-28T11:38:59.859Z] ----------------------------------------------------------------------
+[debug] [2023-05-28T11:38:59.861Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fusek\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-05-28T11:38:59.861Z] CLI Version:   11.20.0
+[debug] [2023-05-28T11:38:59.862Z] Platform:      win32
+[debug] [2023-05-28T11:38:59.862Z] Node Version:  v18.12.1
+[debug] [2023-05-28T11:38:59.863Z] Time:          Sun May 28 2023 23:38:59 GMT+1200 (GMT+12:00)
+[debug] [2023-05-28T11:38:59.863Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-28T11:38:59.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-28T11:38:59.971Z] > authorizing via signed-in user (teck.koda@gmail.com)
+[debug] [2023-05-28T11:38:59.971Z] [iam] checking project aamusted-timetable for permissions ["firebase.projects.get"]
+[debug] [2023-05-28T11:38:59.974Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions [none]
+[debug] [2023-05-28T11:38:59.974Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions x-goog-quota-user=projects/aamusted-timetable
+[debug] [2023-05-28T11:38:59.974Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-28T11:39:01.738Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions 200
+[debug] [2023-05-28T11:39:01.738Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aamusted-timetable:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-28T11:39:01.745Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] !  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2023-05-28T11:39:01.776Z] defaultcredentials: writing to file C:\Users\fusek\AppData\Roaming\firebase\teck_koda_gmail.com_application_default_credentials.json
+[debug] [2023-05-28T11:39:01.778Z] DEBUG: Setting GAC to C:\Users\fusek\AppData\Roaming\firebase\teck_koda_gmail.com_application_default_credentials.json
+[debug] [2023-05-28T11:39:01.779Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig [none]
+[debug] [2023-05-28T11:39:02.667Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig 200
+[debug] [2023-05-28T11:39:02.667Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aamusted-timetable/adminSdkConfig {"projectId":"aamusted-timetable","storageBucket":"aamusted-timetable.appspot.com","locationId":"us-central"}
+[debug] [2023-05-28T11:39:02.683Z] [functions] Watching "C:\Users\fusek\Desktop\firebase-api\functions" for Cloud Functions...
+[debug] [2023-05-28T11:39:02.692Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-05-28T11:39:05.214Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-05-28T11:39:05.215Z] Building nodejs source
+[debug] [2023-05-28T11:39:05.218Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-28T11:39:05.649Z] Serving at port 9005
+
+[debug] [2023-05-28T11:39:05.861Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-28T11:39:05.871Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-05-28T11:39:05.890Z] [functions] Loaded functions definitions from source: app.
+[debug] [2023-05-28T11:39:05.891Z] [functions[us-central1-app]] http function initialized (http://127.0.0.1:5000/aamusted-timetable/us-central1/app).
+[info] i  functions: Loaded functions: app 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2023-05-28T11:39:33.428Z] DEBUG: File C:\Users\fusek\Desktop\firebase-api\functions\package.json changed, reloading triggers
+[error] !!  functions: Failed to load function definition from source: FirebaseError: `runtime` field is required but was not found in firebase.json.
+To fix this, add the following lines to the `functions` section of your firebase.json:
+"runtime": "nodejs16"
+ {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: `runtime` field is required but was not found in firebase.json.\nTo fix this, add the following lines to the `functions` section of your firebase.json:\n\"runtime\": \"nodejs16\"\n"}}
+[debug] [2023-05-28T11:39:40.899Z] DEBUG: File C:\Users\fusek\Desktop\firebase-api\functions\package-lock.json changed, reloading triggers
+[error] !!  functions: Failed to load function definition from source: FirebaseError: `runtime` field is required but was not found in firebase.json.
+To fix this, add the following lines to the `functions` section of your firebase.json:
+"runtime": "nodejs16"
+ {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: `runtime` field is required but was not found in firebase.json.\nTo fix this, add the following lines to the `functions` section of your firebase.json:\n\"runtime\": \"nodejs16\"\n"}}
